@@ -1,0 +1,10 @@
+﻿Employee
+Settings
+Machines
+MachineInstances
+MacDumpLogs
+Miscellaneous
+DTRs
+Holiday
+Leaves
+Users

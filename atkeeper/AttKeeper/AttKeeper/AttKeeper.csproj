@@ -1,0 +1,505 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{2B645F0A-23BF-4F62-8352-8441FDA975DE}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>AttKeeper</RootNamespace>
+    <AssemblyName>AttKeeper</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>Calendar-Tick.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.Office.Interop.Excel, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Office.Interop.Excel.15.0.4795.1000\lib\net20\Microsoft.Office.Interop.Excel.dll</HintPath>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.Common, Version=12.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91" />
+    <Reference Include="Microsoft.ReportViewer.WinForms, Version=12.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL" />
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="core\DatData.cs" />
+    <Compile Include="core\dtr\DataTimeClass.cs" />
+    <Compile Include="core\DTRData.cs" />
+    <Compile Include="core\dtr\DTRManagement.cs" />
+    <Compile Include="core\EmployeeData.cs" />
+    <Compile Include="core\sta\Queries.cs" />
+    <Compile Include="core\sta\Validation.cs" />
+    <Compile Include="data\BioModel.cs" />
+    <Compile Include="data\Company.cs" />
+    <Compile Include="data\Department.cs" />
+    <Compile Include="data\DTR.cs" />
+    <Compile Include="data\Empoyee.cs" />
+    <Compile Include="data\Holiday.cs" />
+    <Compile Include="data\Leaf.cs" />
+    <Compile Include="data\LeaveType.cs" />
+    <Compile Include="data\MacDumpLog.cs" />
+    <Compile Include="data\Machine.cs" />
+    <Compile Include="data\MachineInstance.cs" />
+    <Compile Include="data\Miscellaneou.cs" />
+    <Compile Include="data\Position.cs" />
+    <Compile Include="data\Setting.cs" />
+    <Compile Include="data\SettingDetail.cs" />
+    <Compile Include="data\User.cs" />
+    <Compile Include="form\AboutBox.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="form\AboutBox.Designer.cs">
+      <DependentUpon>AboutBox.cs</DependentUpon>
+    </Compile>
+    <Compile Include="form\DTRForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="form\DTRForm.Designer.cs">
+      <DependentUpon>DTRForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="form\DTRUpdateForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="form\DTRUpdateForm.Designer.cs">
+      <DependentUpon>DTRUpdateForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="form\ImportLogForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="form\ImportLogForm.Designer.cs">
+      <DependentUpon>ImportLogForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="form\LoginForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="form\LoginForm.Designer.cs">
+      <DependentUpon>LoginForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="form\MainForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="form\MainForm.Designer.cs">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="form\ManageDataForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="form\ManageDataForm.Designer.cs">
+      <DependentUpon>ManageDataForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="form\PreferencesForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="form\PreferencesForm.Designer.cs">
+      <DependentUpon>PreferencesForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="form\ReportWizardDetailFormcs.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="form\ReportWizardDetailFormcs.Designer.cs">
+      <DependentUpon>ReportWizardDetailFormcs.cs</DependentUpon>
+    </Compile>
+    <Compile Include="form\ReportWizardForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="form\ReportWizardForm.Designer.cs">
+      <DependentUpon>ReportWizardForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="form\SettingDetailForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="form\SettingDetailForm.Designer.cs">
+      <DependentUpon>SettingDetailForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="form\SettingForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="form\SettingForm.Designer.cs">
+      <DependentUpon>SettingForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="form\SettingWizard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="form\SettingWizard.Designer.cs">
+      <DependentUpon>SettingWizard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="form\UserForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="form\UserForm.Designer.cs">
+      <DependentUpon>UserForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="man\DataRepository.cs" />
+    <Compile Include="man\IDataRepository.cs" />
+    <Compile Include="man\obj\CompanyManager.cs" />
+    <Compile Include="man\obj\DepartmentManager.cs" />
+    <Compile Include="man\obj\DTRManager.cs" />
+    <Compile Include="man\obj\EmployeeManager.cs" />
+    <Compile Include="man\obj\HolidayManager.cs" />
+    <Compile Include="man\obj\LeaveManager.cs" />
+    <Compile Include="man\obj\LeaveTypeManager.cs" />
+    <Compile Include="man\obj\MacDumpLogManager.cs" />
+    <Compile Include="man\obj\MachineInstanceManager.cs" />
+    <Compile Include="man\obj\MachineManager.cs" />
+    <Compile Include="man\obj\MicellaneousManager.cs" />
+    <Compile Include="man\obj\PositionManager.cs" />
+    <Compile Include="man\obj\SettingDetailManager.cs" />
+    <Compile Include="man\obj\SettingManager.cs" />
+    <Compile Include="man\obj\UserManager.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="form\AboutBox.resx">
+      <DependentUpon>AboutBox.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="form\DTRForm.resx">
+      <DependentUpon>DTRForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="form\DTRUpdateForm.resx">
+      <DependentUpon>DTRUpdateForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="form\ImportLogForm.resx">
+      <DependentUpon>ImportLogForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="form\LoginForm.resx">
+      <DependentUpon>LoginForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="form\MainForm.resx">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="form\ManageDataForm.resx">
+      <DependentUpon>ManageDataForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="form\PreferencesForm.resx">
+      <DependentUpon>PreferencesForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="form\ReportWizardDetailFormcs.resx">
+      <DependentUpon>ReportWizardDetailFormcs.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="form\ReportWizardForm.resx">
+      <DependentUpon>ReportWizardForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="form\SettingDetailForm.resx">
+      <DependentUpon>SettingDetailForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="form\SettingForm.resx">
+      <DependentUpon>SettingForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="form\SettingWizard.resx">
+      <DependentUpon>SettingWizard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="form\UserForm.resx">
+      <DependentUpon>UserForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="report\DTRReport.rdlc" />
+    <EmbeddedResource Include="report\DTRReportDuration.rdlc" />
+    <EmbeddedResource Include="report\Report1.rdlc" />
+    <None Include="anviz\anviz_file\BAK.KQ" />
+    <None Include="anviz\node_modules\.bin\nodezip" />
+    <None Include="anviz\node_modules\.bin\nodezip.cmd" />
+    <None Include="anviz\node_modules\anviz-backup-reader\.npmignore" />
+    <None Include="anviz\node_modules\anviz-backup-reader\demo\BAK.KQ" />
+    <None Include="anviz\node_modules\anviz-backup-reader\package.json" />
+    <None Include="anviz\node_modules\anviz-backup-reader\README.md" />
+    <None Include="anviz\node_modules\collections\.editorconfig" />
+    <None Include="anviz\node_modules\collections\CHANGES.md" />
+    <None Include="anviz\node_modules\collections\FUTURE.md" />
+    <None Include="anviz\node_modules\collections\LICENSE.md" />
+    <None Include="anviz\node_modules\collections\package.json" />
+    <None Include="anviz\node_modules\collections\README.md" />
+    <None Include="anviz\node_modules\excel-export\.npmignore" />
+    <None Include="anviz\node_modules\excel-export\example\package.json" />
+    <None Include="anviz\node_modules\excel-export\package.json" />
+    <None Include="anviz\node_modules\excel-export\Readme.md" />
+    <None Include="anviz\node_modules\int24\.npmignore" />
+    <None Include="anviz\node_modules\int24\.travis.yml" />
+    <None Include="anviz\node_modules\int24\LICENSE" />
+    <None Include="anviz\node_modules\int24\package.json" />
+    <None Include="anviz\node_modules\int24\README.md" />
+    <None Include="anviz\node_modules\jszip\.jshintignore" />
+    <None Include="anviz\node_modules\jszip\.jshintrc" />
+    <None Include="anviz\node_modules\jszip\.npmignore" />
+    <None Include="anviz\node_modules\jszip\.travis.yml" />
+    <None Include="anviz\node_modules\jszip\CHANGES.md" />
+    <None Include="anviz\node_modules\jszip\CHANGES.md.orig" />
+    <None Include="anviz\node_modules\jszip\index.html.orig" />
+    <None Include="anviz\node_modules\jszip\LICENSE.markdown" />
+    <None Include="anviz\node_modules\jszip\package.json" />
+    <None Include="anviz\node_modules\jszip\README.markdown" />
+    <None Include="anviz\node_modules\node-zip\.npmignore" />
+    <None Include="anviz\node_modules\node-zip\bin\nodezip" />
+    <None Include="anviz\node_modules\node-zip\bin\packer" />
+    <None Include="anviz\node_modules\node-zip\Makefile" />
+    <None Include="anviz\node_modules\node-zip\package.json" />
+    <None Include="anviz\node_modules\node-zip\README.md" />
+    <None Include="anviz\node_modules\pako\CHANGELOG.md" />
+    <None Include="anviz\node_modules\pako\LICENSE" />
+    <None Include="anviz\node_modules\pako\package.json" />
+    <None Include="anviz\node_modules\pako\README.md" />
+    <None Include="anviz\node_modules\weak-map\package.json" />
+    <None Include="anviz\node_modules\weak-map\README.md" />
+    <None Include="packages.config" />
+    <None Include="Properties\DataSources\AttKeeper.core.DatData.datasource" />
+    <None Include="Properties\DataSources\AttKeeper.core.DtrData.datasource" />
+    <None Include="Properties\DataSources\AttKeeper.core.EmployeeData.datasource" />
+    <None Include="Properties\DataSources\AttKeeper.data.Company.datasource" />
+    <None Include="Properties\DataSources\AttKeeper.data.Department.datasource" />
+    <None Include="Properties\DataSources\AttKeeper.data.DTR.datasource" />
+    <None Include="Properties\DataSources\AttKeeper.data.Empoyee.datasource" />
+    <None Include="Properties\DataSources\AttKeeper.data.Holiday.datasource" />
+    <None Include="Properties\DataSources\AttKeeper.data.Leaf.datasource" />
+    <None Include="Properties\DataSources\AttKeeper.data.LeaveType.datasource" />
+    <None Include="Properties\DataSources\AttKeeper.data.MacDumpLog.datasource" />
+    <None Include="Properties\DataSources\AttKeeper.data.Machine.datasource" />
+    <None Include="Properties\DataSources\AttKeeper.data.MachineInstance.datasource" />
+    <None Include="Properties\DataSources\AttKeeper.data.Miscellaneou.datasource" />
+    <None Include="Properties\DataSources\AttKeeper.data.Position.datasource" />
+    <None Include="Properties\DataSources\AttKeeper.data.Setting.datasource" />
+    <None Include="Properties\DataSources\AttKeeper.data.SettingDetail.datasource" />
+    <None Include="Properties\DataSources\AttKeeper.data.User.datasource" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.5.2">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.5.2 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\login.png" />
+    <None Include="Resources\deped-180px.png" />
+    <None Include="Resources\depedlogo-300x300.png" />
+    <None Include="Resources\Error.png" />
+    <None Include="Resources\Box_Full.png" />
+    <None Include="Resources\Printer_Default.png" />
+    <None Include="Resources\Printer_Portrait.png" />
+    <None Include="Resources\Files_Download.png" />
+    <None Include="Resources\Group-Settings.ico" />
+    <None Include="Resources\Options.ico" />
+    <None Include="Resources\Table-Favourites.ico" />
+    <None Include="Resources\Calendar-Settings.ico" />
+    <None Include="Resources\Table-Create.ico" />
+    <None Include="Resources\Print-Favourites.ico" />
+    <Content Include="anviz\anviz_file\convert.js" />
+    <Content Include="anviz\app.js" />
+    <Content Include="anviz\index.js" />
+    <Content Include="anviz\node_modules\anviz-backup-reader\demo\demo.js" />
+    <Content Include="anviz\node_modules\anviz-backup-reader\index.js" />
+    <Content Include="anviz\node_modules\collections\collections.js" />
+    <Content Include="anviz\node_modules\collections\deque.js" />
+    <Content Include="anviz\node_modules\collections\dict.js" />
+    <Content Include="anviz\node_modules\collections\fast-map.js" />
+    <Content Include="anviz\node_modules\collections\fast-set.js" />
+    <Content Include="anviz\node_modules\collections\generic-collection.js" />
+    <Content Include="anviz\node_modules\collections\generic-map.js" />
+    <Content Include="anviz\node_modules\collections\generic-order.js" />
+    <Content Include="anviz\node_modules\collections\generic-set.js" />
+    <Content Include="anviz\node_modules\collections\heap.js" />
+    <Content Include="anviz\node_modules\collections\iterator.js" />
+    <Content Include="anviz\node_modules\collections\lfu-map.js" />
+    <Content Include="anviz\node_modules\collections\lfu-set.js" />
+    <Content Include="anviz\node_modules\collections\list.js" />
+    <Content Include="anviz\node_modules\collections\listen\array-changes.js" />
+    <Content Include="anviz\node_modules\collections\listen\map-changes.js" />
+    <Content Include="anviz\node_modules\collections\listen\property-changes.js" />
+    <Content Include="anviz\node_modules\collections\listen\range-changes.js" />
+    <Content Include="anviz\node_modules\collections\lru-map.js" />
+    <Content Include="anviz\node_modules\collections\lru-set.js" />
+    <Content Include="anviz\node_modules\collections\map.js" />
+    <Content Include="anviz\node_modules\collections\multi-map.js" />
+    <Content Include="anviz\node_modules\collections\set.js" />
+    <Content Include="anviz\node_modules\collections\shim-array.js" />
+    <Content Include="anviz\node_modules\collections\shim-function.js" />
+    <Content Include="anviz\node_modules\collections\shim-object.js" />
+    <Content Include="anviz\node_modules\collections\shim-regexp.js" />
+    <Content Include="anviz\node_modules\collections\shim.js" />
+    <Content Include="anviz\node_modules\collections\sorted-array-map.js" />
+    <Content Include="anviz\node_modules\collections\sorted-array-set.js" />
+    <Content Include="anviz\node_modules\collections\sorted-array.js" />
+    <Content Include="anviz\node_modules\collections\sorted-map.js" />
+    <Content Include="anviz\node_modules\collections\sorted-set.js" />
+    <Content Include="anviz\node_modules\collections\tree-log.js" />
+    <Content Include="anviz\node_modules\collections\weak-map.js" />
+    <Content Include="anviz\node_modules\excel-export\example\app.js" />
+    <Content Include="anviz\node_modules\excel-export\example\styles.xml" />
+    <Content Include="anviz\node_modules\excel-export\index.js" />
+    <Content Include="anviz\node_modules\excel-export\sheet.js" />
+    <Content Include="anviz\node_modules\excel-export\test\main.js" />
+    <Content Include="anviz\node_modules\int24\index.js" />
+    <Content Include="anviz\node_modules\int24\int24.js" />
+    <Content Include="anviz\node_modules\int24\test\int24-test.js" />
+    <Content Include="anviz\node_modules\jszip\lib\base64.js" />
+    <Content Include="anviz\node_modules\jszip\lib\compressedObject.js" />
+    <Content Include="anviz\node_modules\jszip\lib\compressions.js" />
+    <Content Include="anviz\node_modules\jszip\lib\crc32.js" />
+    <Content Include="anviz\node_modules\jszip\lib\dataReader.js" />
+    <Content Include="anviz\node_modules\jszip\lib\defaults.js" />
+    <Content Include="anviz\node_modules\jszip\lib\deprecatedPublicUtils.js" />
+    <Content Include="anviz\node_modules\jszip\lib\flate.js" />
+    <Content Include="anviz\node_modules\jszip\lib\index.js" />
+    <Content Include="anviz\node_modules\jszip\lib\license_header.js" />
+    <Content Include="anviz\node_modules\jszip\lib\load.js" />
+    <Content Include="anviz\node_modules\jszip\lib\nodeBuffer.js" />
+    <Content Include="anviz\node_modules\jszip\lib\nodeBufferReader.js" />
+    <Content Include="anviz\node_modules\jszip\lib\object.js" />
+    <Content Include="anviz\node_modules\jszip\lib\signature.js" />
+    <Content Include="anviz\node_modules\jszip\lib\stringReader.js" />
+    <Content Include="anviz\node_modules\jszip\lib\stringWriter.js" />
+    <Content Include="anviz\node_modules\jszip\lib\support.js" />
+    <Content Include="anviz\node_modules\jszip\lib\uint8ArrayReader.js" />
+    <Content Include="anviz\node_modules\jszip\lib\uint8ArrayWriter.js" />
+    <Content Include="anviz\node_modules\jszip\lib\utf8.js" />
+    <Content Include="anviz\node_modules\jszip\lib\utils.js" />
+    <Content Include="anviz\node_modules\jszip\lib\zipEntries.js" />
+    <Content Include="anviz\node_modules\jszip\lib\zipEntry.js" />
+    <Content Include="anviz\node_modules\jszip\vendor\FileSaver.js" />
+    <Content Include="anviz\node_modules\node-zip\lib\nodezip-cli.js" />
+    <Content Include="anviz\node_modules\node-zip\lib\nodezip.js" />
+    <Content Include="anviz\node_modules\node-zip\test\nodezip_spec.js" />
+    <Content Include="anviz\node_modules\pako\dist\pako.js" />
+    <Content Include="anviz\node_modules\pako\dist\pako.min.js" />
+    <Content Include="anviz\node_modules\pako\dist\pako_deflate.js" />
+    <Content Include="anviz\node_modules\pako\dist\pako_deflate.min.js" />
+    <Content Include="anviz\node_modules\pako\dist\pako_inflate.js" />
+    <Content Include="anviz\node_modules\pako\dist\pako_inflate.min.js" />
+    <Content Include="anviz\node_modules\pako\index.js" />
+    <Content Include="anviz\node_modules\pako\lib\deflate.js" />
+    <Content Include="anviz\node_modules\pako\lib\inflate.js" />
+    <Content Include="anviz\node_modules\pako\lib\utils\common.js" />
+    <Content Include="anviz\node_modules\pako\lib\utils\strings.js" />
+    <Content Include="anviz\node_modules\pako\lib\zlib\adler32.js" />
+    <Content Include="anviz\node_modules\pako\lib\zlib\constants.js" />
+    <Content Include="anviz\node_modules\pako\lib\zlib\crc32.js" />
+    <Content Include="anviz\node_modules\pako\lib\zlib\deflate.js" />
+    <Content Include="anviz\node_modules\pako\lib\zlib\gzheader.js" />
+    <Content Include="anviz\node_modules\pako\lib\zlib\inffast.js" />
+    <Content Include="anviz\node_modules\pako\lib\zlib\inflate.js" />
+    <Content Include="anviz\node_modules\pako\lib\zlib\inftrees.js" />
+    <Content Include="anviz\node_modules\pako\lib\zlib\messages.js" />
+    <Content Include="anviz\node_modules\pako\lib\zlib\trees.js" />
+    <Content Include="anviz\node_modules\pako\lib\zlib\zstream.js" />
+    <Content Include="anviz\node_modules\weak-map\weak-map.js" />
+    <Content Include="Calendar-Tick.ico" />
+    <Content Include="images\rpt_w.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="todo\ToDo.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\JBiometric\JBiometric.csproj">
+      <Project>{2edf92ab-3492-41b0-8aea-dd34fd096cb4}</Project>
+      <Name>JBiometric</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\UtilityManager\UtilityManager.csproj">
+      <Project>{52F42C75-B40E-4FCA-9C57-3DAB29618A30}</Project>
+      <Name>UtilityManager</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="Microsoft.Office.Core">
+      <Guid>{2DF8D04C-5BFA-101B-BDE5-00AA0044DE52}</Guid>
+      <VersionMajor>2</VersionMajor>
+      <VersionMinor>5</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

@@ -1,0 +1,16 @@
+D:\JoshFiles\ClassDLL\JBiometric\JBiometric\bin\Release\JBiometric.dll
+D:\JoshFiles\ClassDLL\JBiometric\JBiometric\bin\Release\JBiometric.pdb
+D:\JoshFiles\ClassDLL\JBiometric\JBiometric\bin\Release\Interop.zkemkeeper.dll
+D:\JoshFiles\ClassDLL\JBiometric\JBiometric\obj\Release\ResolveAssemblyReference.cache
+D:\JoshFiles\ClassDLL\JBiometric\JBiometric\obj\Release\Interop.zkemkeeper.dll
+D:\JoshFiles\ClassDLL\JBiometric\JBiometric\obj\Release\JBiometric.csproj.ResolveComReference.cache
+D:\JoshFiles\ClassDLL\JBiometric\JBiometric\obj\Release\JBiometric.dll
+D:\JoshFiles\ClassDLL\JBiometric\JBiometric\obj\Release\JBiometric.pdb
+C:\Users\josh\Documents\GitHub\atkeeper\JBiometric\bin\Release\JBiometric.dll
+C:\Users\josh\Documents\GitHub\atkeeper\JBiometric\bin\Release\JBiometric.pdb
+C:\Users\josh\Documents\GitHub\atkeeper\JBiometric\bin\Release\Interop.zkemkeeper.dll
+C:\Users\josh\Documents\GitHub\atkeeper\JBiometric\obj\Release\JBiometric.csprojResolveAssemblyReference.cache
+C:\Users\josh\Documents\GitHub\atkeeper\JBiometric\obj\Release\Interop.zkemkeeper.dll
+C:\Users\josh\Documents\GitHub\atkeeper\JBiometric\obj\Release\JBiometric.csproj.ResolveComReference.cache
+C:\Users\josh\Documents\GitHub\atkeeper\JBiometric\obj\Release\JBiometric.dll
+C:\Users\josh\Documents\GitHub\atkeeper\JBiometric\obj\Release\JBiometric.pdb
